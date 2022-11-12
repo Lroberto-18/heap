@@ -8,6 +8,6 @@ typedef struct element hElem;
 struct vector{
     hElem *head;
     int qtd;
-    hElem *vector[20];
+    hElem *vector[100000000];
 };
 typedef struct vector Heap;

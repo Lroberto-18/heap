@@ -11,9 +11,15 @@ Heap* heap(int n){
     }
     return heap;
 }
-void Creat(int v[]){
-    int len = sizeof(v)/sizeof(v[0]);
-    Heap *He = heap(len); 
+hElem *criar_element(int key){
+    hElem *h = (hElem*)malloc(sizeof(hElem));
+    //teste
+}
+typedef struct vector Heap;
+void Creat(int v[],Heap *He){
+    int len=10;
+    //int len = sizeof(v)/sizeof(v[0]);
+    //Heap *He = heap(len); 
     for(int i = 0; i<len;i++){
         hElem *h = (hElem*)malloc(sizeof(hElem));
         if(i==0) He->head=h;
@@ -35,9 +41,9 @@ int main(){
         v[i]= 1 +rand() % 100;
         printf("%d ",v[i]);
     }
-    //Creat(v);
-    //int t =  H->head->key;
+    Creat(v,H);
+    int t =  H->head->key;
     int a = H->vector[2]->key;
-    printf("%d",a);
+    printf("\n3->%d\n",a);
 return 0;    
 }
