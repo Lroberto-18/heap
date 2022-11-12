@@ -8,6 +8,12 @@ typedef struct element hElem;
 struct vector{
     hElem *head;
     int qtd;
-    //hElem *vector[100];
 };
 typedef struct vector Heap;
+
+Heap* heap(int);
+hElem *creat_element(int);
+//void Creat_heap(int v[],Heap*);
+//void remove(hElem*, Heap*);
+//void down(hElem*, Heap*);
+//void up(hElem*, Heap*);
