@@ -69,3 +69,54 @@ int main(){
     printf("diretia->%d\n",s1);
 return 0;    
 }
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct element{
+   int key;
+   struct element *left;
+   struct element *right;
+   struct element *father;
+};
+typedef struct element hElem;
+
+hElem *creat_element(int);
+
+hElem *creat_element(int key){
+    hElem *h = (hElem*)malloc(sizeof(hElem));
+    h->key = key;
+    h->left = NULL;
+    h->right = NULL;
+    return h;
+}
+
+void Creat_heap(int v[],hElem* heap[],int n){
+    for(int i = 0; i<n;i++){
+        hElem *h = creat_element(v[i]);
+        heap[i]=h;
+    }
+    hElem *aux = heap[0];
+    for(int i = 0;i<n/2;i++){
+        int aux_n = i + 1;
+        aux->left = heap[(aux_n*2)-1];
+        aux->right = heap[aux_n*2];
+        aux = heap[aux_n];
+    }
+}
+int main(){
+    int v[] = {1,2,3,4,5,6,7,8,9,10,11,12,13};
+    int n = 13;
+    hElem *H[n];
+    Creat_heap(v,H,n);
+    int c = n-1;
+    for(int i=0;i<c/2;i++){
+        printf("%d",H[i]->left->key);
+        printf("<- ");
+        printf("%d",H[i]->key);
+        printf(" ->");
+        printf("%d",H[i]->right->key);
+        printf("\n");
+    }
+return 0;    
+}
