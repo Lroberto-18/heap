@@ -13,7 +13,7 @@ typedef struct vector Heap;
 
 Heap* heap(int);
 hElem *creat_element(int);
-//void Creat_heap(int v[],Heap*);
+void Creat_heap(int v[],Heap*,int);
 //void remove(hElem*, Heap*);
 //void down(hElem*, Heap*);
 //void up(hElem*, Heap*);
