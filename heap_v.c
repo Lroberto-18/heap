@@ -98,7 +98,7 @@ void heapsort(int vector[],int len){
 
 int main(){
     int v[] = {8, 23, 53, 41, 62, 36, 78, 7, 19, 10, 11, 67, 9, 123};
-    int n= sizeof(v)/sizeof(v[0]);//tamanho do vetor v
+    int n= sizeof(v)/sizeof(v[0]); //tamanho do vetor v
     int *heap;
     heap = malloc(sizeof(heap)*n);
 
