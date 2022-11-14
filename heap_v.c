@@ -53,13 +53,13 @@ int main(){
     int v[] = {1,2,3,4,5,6,7,8,9,10,11};
     int n= sizeof(v)/sizeof(v[0]);//tamanho do vetor v
     int *heap[n];
-    creat(heap,v,n); //criando o heap
+    creat(heap,v,n);  //criando o heap
     printf("\n");
     printf("\no HEAP criado é ( ");
     for(int i=0;i<n;i++){
         printf("%d ",heap[i]);
     }printf(")\n");
-    up(heap,10,100,11);
+    up(heap,5,100,11);
     printf("\no HEAP criado é ( ");
     for(int i=0;i<n;i++){
         printf("%d ",heap[i]);
